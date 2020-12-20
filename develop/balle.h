@@ -1,6 +1,8 @@
 #ifndef BALLE_H
 #define BALLE_H
-class balle
+namespace cassebrique
+{
+    class balle
 {
 public:
     balle(point &position,double rayon);
@@ -13,5 +15,7 @@ private:
 protected:
 
 };
+
+}
 
 #endif

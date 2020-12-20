@@ -1,5 +1,7 @@
 #ifndef VECTORPOSITION_H
 #define VECTORPOSITION_H
+namespace cassebrique
+{
 class vectorposition
 {
 public:
@@ -15,5 +17,5 @@ private:
 
 
 };
-
+}
 #endif

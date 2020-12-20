@@ -1,5 +1,7 @@
 #ifndef BRIQUEINCASSABLE_H
 #define BRIQUEINCASSABLE_H
+namespace cassebrique
+{
 class briqueIncassable : public balle
 {
 public:
@@ -9,5 +11,5 @@ public:
 
 
 };
-
+}
 #endif

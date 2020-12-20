@@ -1,5 +1,7 @@
 #ifndef BRIQUE_H
 #define BRIQUE_H
+namespace cassebrique
+{
 class brique
 {
 public:
@@ -16,5 +18,5 @@ private:
 protected:
 
 };
-
+}
 #endif

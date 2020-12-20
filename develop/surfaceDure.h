@@ -1,6 +1,7 @@
 #ifndef SURFACEDURE_H
 #define SURFACEDURE_H
-
+namespace cassebrique
+{
 
 class surfaceDure
 {
@@ -10,5 +11,5 @@ class surfaceDure
 
 
 };
-
+}
 #endif // SURFACEDURE_H

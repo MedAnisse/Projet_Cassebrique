@@ -1,5 +1,7 @@
 #ifndef BRIQUECASSABLEAPRESPLUSIEURFOIS_H
 #define BRIQUECASSABLEAPRESPLUSIEURFOIS_H
+namespace cassebrique
+{
 class briqueCassableApresPlusieurFois : public balle
 {
 public:
@@ -11,5 +13,5 @@ private:
 protected:
 
 };
-
+}
 #endif

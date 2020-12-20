@@ -15,6 +15,12 @@ class Terrain
         Raquette* TRaquette() const ;
         balle Tballe() const ;
         void run(double dt);
+        void initializer_Murs(double hauteur);
+        void initializer_Briques(int nbColone,int nbLigne,double hauteur);
+        void initializer_Raquette(point &position,double hauteur,double largeur);
+        void initializer_Balle();
+        void initializer_Balle(point & position,double vitesse);
+        unique_ptr<surface> randomSurface();
     protected:
 
     private:

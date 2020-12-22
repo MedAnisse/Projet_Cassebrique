@@ -1,0 +1,72 @@
+# depslib dependency file v1.0
+1474565254 source:c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\test_rectangle\point.cpp
+	<iostream>
+	<cmath>
+	"point.h"
+	"vector.h"
+
+1601192718 c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\test_rectangle\point.h
+	<iosfwd>
+
+1474391214 c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\test_rectangle\vector.h
+	<iosfwd>
+
+1608563157 source:c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\test_rectangle\rectangle.cpp
+	"rectangle.h"
+	<iostream>
+	<ostream>
+	<istream>
+
+1608563056 c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\test_rectangle\rectangle.h
+	<memory>
+	<istream>
+	<ostream>
+	"point.h"
+
+1608562858 source:c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\test_rectangle\testmain.cpp
+	"doctest.h"
+
+1606982354 c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\test_rectangle\doctest.h
+	<signal.h>
+	<iosfwd>
+	<cstddef>
+	<ostream>
+	<ciso646>
+	<type_traits>
+	"doctest_fwd.h"
+	<ctime>
+	<cmath>
+	<climits>
+	<math.h>
+	<new>
+	<cstdio>
+	<cstdlib>
+	<cstring>
+	<limits>
+	<utility>
+	<fstream>
+	<sstream>
+	<iostream>
+	<algorithm>
+	<iomanip>
+	<vector>
+	<atomic>
+	<mutex>
+	<set>
+	<map>
+	<exception>
+	<stdexcept>
+	<csignal>
+	<cfloat>
+	<cctype>
+	<cstdint>
+	<sys/types.h>
+	<unistd.h>
+	<sys/sysctl.h>
+	<AfxWin.h>
+	<windows.h>
+	<Windows.h>
+	<io.h>
+	<sys/time.h>
+	<unistd.h>
+

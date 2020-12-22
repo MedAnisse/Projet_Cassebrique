@@ -12,6 +12,7 @@ class ball {
 
          ball(point &position,double vitesse, double rayon);
          ball(double x,double y, double rayon);
+         virtual ~ball();
          double rayon() const;
          double vitesse() const;
          point position() const;

@@ -1,25 +1,35 @@
 #ifndef MURE_H
 #define MURE_H
+#include<memory>
+#include<istream>
+#include<ostream>
+#include"point.h"
+#include"surface.h"
+#include"surfaceNormal.h"
+#include "rectangle.h"
+using std::unique_ptr;
+using std::make_unique;
+using geom::point;
+class balle;
 namespace cassebrique
 {
-class mure
+class mure : public rectangle
 {
 public:
-    mure(point& BasGauche,point& HautDroit,unique_ptr<surface>surfaceK);
-    mure(point& BasGauche,double hauteur,double largeur,unique_ptr<surface>surfaceK);
-    mure(double BasGauche_x,double BasGauche_y,double HautDroit_x,double HautDroit_y,unique_ptr<surface>surfaceK);
-    virtual ~mure();
-    mure();
-    surface* surfaceType()const;
-    double Hauteur()const;
-    double Largeur()const;
 
+    mure();
+    mure(const point& BasGauche,const point& HautDroit,unique_ptr<surface>  surfaceK=make_unique<surfaceNormal>() );
+    mure(point& BasGauche,double hauteur,double largeur,unique_ptr<surface>surfaceK=make_unique<surfaceNormal>());
+    virtual ~mure();
+    surface* surfaceType()const;
+    bool OnCollusion(balle& balle)const ;
 private:
     unique_ptr<surface> d_surface;
-    point d_BasGauche;
-    point d_HautDroit;
 protected:
 
 };
+std::ostream& operator<<(std::ostream& , const mure& );
+std::istream& operator>>(std::istream& , mure& );
+
 }
 #endif

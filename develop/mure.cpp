@@ -1,39 +1,51 @@
 #include "mure.h"
+#include <memory>
+#include<iostream>
+#include<ostream>
+#include<istream>
+#include<rectangle.h>
+using std::unique_ptr;
+using std::move;
+using std::make_unique;
+
+using geom::point;
 namespace cassebrique
 {
-mure::mure(point& BasGauche,point& HautDroit,unique_ptr<surface>surfaceK):d_HautDroit{HautDroit},d_BasGauche{BasGauche}
+mure::mure(const point& BasGauche,const point& HautDroit,unique_ptr<surface>surfaceK):rectangle{BasGauche,HautDroit}
 {
     d_surface=move(surfaceK);
 }
-mure::mure(point& BasGauche,double hauteur,double largeur):d_BasGauche{BasGauche}
+mure::mure(point& BasGauche,double hauteur,double largeur,unique_ptr<surface>surfaceK):rectangle{BasGauche,hauteur,largeur}
 {
-    d_HautDroit{d_BasGauche.x()+largeur,d_BasGauche.y()-hauteur};
     d_surface=move(surfaceK);
 }
-mure::mure(double BasGauche_x,double BasGauche_y,double HautDroit_x,double HautDroit_y):
-    d_HautDroit{{BasGauche_x,BasGauche_y}},d_BasGauche{{HautDroit_x,HautDroit_y}}
-    {
-    d_surface=move(surfaceK);
-    }
-
  mure::~mure()
 {
 
 }
-mure::mure()
+mure::mure():rectangle{}
 {
-
+    d_surface=make_unique<surfaceNormal>();
 }
 surface* mure::surfaceType()const
 {
     return d_surface.get();
 }
-double mure::Hauteur()const
+
+
+std::ostream& operator<<(std::ostream& ost, const mure& m)
 {
-    return d_HautDroit.y()-d_BasGauche.y();
+  m.print(ost);
+  return ost;
 }
-double mure::Largeur()const
+
+std::istream& operator>>(std::istream& ist, mure& m)
 {
-    d_HautDroit.x()-d_BasGauche.x();
+  m.read(ist);
+  return ist;
+}
+bool mure::OnCollusion(balle& balle)const
+{
+    return d_surface->collusion(balle);
 }
 }

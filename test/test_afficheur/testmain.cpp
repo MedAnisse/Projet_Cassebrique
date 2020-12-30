@@ -11,7 +11,7 @@ using std::cout;
 using cassebrique::Terrain;
 int main()
     {
-    Terrain t{700,890,20,20,10,10,100};
+    Terrain t{700,890,10,10,10,10,100};
     ::opengraphsize((int)t.largeur()+8,(int)t.hauteur()+10);
 
     cassebrique::afficheurWinBgi* affiche =new cassebrique::afficheurWinBgi();

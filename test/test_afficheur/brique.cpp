@@ -39,7 +39,7 @@ namespace cassebrique
         {
             initializerLesSurfaces(move(surfaceK));
         }
-        bool brique::existe_collusion(balle& balle)
+        bool brique::OnCollusion(balle& balle)
         {
             return true;
         }

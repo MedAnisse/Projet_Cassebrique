@@ -14,7 +14,7 @@ namespace cassebrique
 
      }
 
-    bool briqueCassable::existe_collusion(balle& balle)
+    bool briqueCassable::OnCollusion(balle& balle)
     {
         return true;
     }

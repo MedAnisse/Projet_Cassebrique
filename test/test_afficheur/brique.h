@@ -16,7 +16,7 @@ public:
     brique(point& BasGauche,double hauteur,double largeur,unique_ptr<surface>surfaceK);
     virtual ~brique();
     void  initializerLesSurfaces(unique_ptr<surface>surfacek);
-    virtual bool existe_collusion(balle& balle) ;
+    virtual bool OnCollusion(balle& balle) ;
 protected:
        vector<unique_ptr<surface>> d_surface;
 

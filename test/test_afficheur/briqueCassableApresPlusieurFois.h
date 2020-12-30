@@ -16,7 +16,7 @@ public:
     briqueCassableApresPlusieurFois(int a,point& BasGauche,double hauteur,double largeur,unique_ptr<surface>surfaceK);
     briqueCassableApresPlusieurFois(int a);
     virtual ~briqueCassableApresPlusieurFois();
-    virtual bool existe_collusion(balle& balle)  override;
+    virtual bool OnCollusion(balle& balle)  override;
     private:
     int d_nombreDeFois;
 

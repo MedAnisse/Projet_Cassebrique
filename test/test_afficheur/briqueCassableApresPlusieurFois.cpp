@@ -15,7 +15,7 @@ namespace cassebrique
         brique{BasGauche,hauteur,largeur,move(surfaceK)},d_nombreDeFois{a}{}
     briqueCassableApresPlusieurFois::briqueCassableApresPlusieurFois(int a):
         brique{},d_nombreDeFois{a}{}
-    bool briqueCassableApresPlusieurFois::existe_collusion(balle& balle)
+    bool briqueCassableApresPlusieurFois::OnCollusion(balle& balle)
     {
         return true;
     }

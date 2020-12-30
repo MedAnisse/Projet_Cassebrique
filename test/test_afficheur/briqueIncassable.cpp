@@ -8,7 +8,7 @@ namespace cassebrique
     briqueIncassable::briqueIncassable():brique{}{}
 
      briqueIncassable::~briqueIncassable(){}
-    bool briqueIncassable::existe_collusion(balle& balle)
+    bool briqueIncassable::OnCollusion(balle& balle)
     {
         return true;
     }

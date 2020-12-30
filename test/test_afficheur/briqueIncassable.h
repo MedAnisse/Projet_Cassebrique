@@ -10,7 +10,7 @@ public:
     briqueIncassable(point& BasGauche,double hauteur,double largeur,unique_ptr<surface>surfaceK);
     briqueIncassable();
     virtual ~briqueIncassable();
-    virtual bool existe_collusion(balle& balle)  override;
+    virtual bool OnCollusion(balle& balle)  override;
     private:
     vector<unique_ptr<surface>> d_surface;
 };

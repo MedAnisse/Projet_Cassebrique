@@ -21,6 +21,7 @@ public:
     void move_Droit();
     void move_Gauche(int n);
     void move_Droit(int n);
+    bool OnCollusion(balle& balle)const ;
 private:
     unique_ptr<surface> d_surface;
 };

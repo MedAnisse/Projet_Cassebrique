@@ -1,0 +1,219 @@
+# depslib dependency file v1.0
+1609318127 source:c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\afficheurwinbgi.cpp
+	"rectangle.h"
+	"Raquette.h"
+	"balle.h"
+	"brique.h"
+	"graphics.h"
+	<iostream>
+	<vector>
+	"afficheurWinBgi.h"
+
+1609334659 c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\rectangle.h
+	<memory>
+	<istream>
+	<ostream>
+	"point.h"
+
+1601192718 c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\point.h
+	<iosfwd>
+
+1609331116 c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\raquette.h
+	"rectangle.h"
+	"surface.h"
+	"surfaceNormal.h"
+	<memory>
+
+1608739048 c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\surface.h
+	"point.h"
+	"vector.h"
+	<memory>
+
+1474391214 c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\vector.h
+	<iosfwd>
+
+1608718716 c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\surfacenormal.h
+	"surface.h"
+	"point.h"
+
+1609227031 c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\balle.h
+	"vector.h"
+	"point.h"
+
+1609327697 c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\brique.h
+	"rectangle.h"
+	"surface.h"
+	<memory>
+	<vector>
+
+1380994020 c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\graphics.h
+
+1609228751 c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\afficheurwinbgi.h
+	"afficheur.h"
+	"rectangle.h"
+
+1609228748 c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\afficheur.h
+	"rectangle.h"
+	"Raquette.h"
+	"balle.h"
+	"brique.h"
+	<vector>
+
+1609227029 source:c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\balle.cpp
+	"balle.h"
+	"vector.h"
+
+1609327705 source:c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\brique.cpp
+	"brique.h"
+	"rectangle.h"
+	"surface.h"
+	<memory>
+	<iostream>
+
+1609331242 source:c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\briquecassable.cpp
+	"briqueCassable.h"
+	"brique.h"
+
+1609331230 c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\briquecassable.h
+	"brique.h"
+
+1609331248 source:c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\briquecassableapresplusieurfois.cpp
+	"briqueCassableApresPlusieurFois.h"
+	"brique.h"
+	<iostream>
+	"point.h"
+	<memory>
+
+1609331268 c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\briquecassableapresplusieurfois.h
+	"brique.h"
+	<iostream>
+	"point.h"
+	<memory>
+
+1609331254 source:c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\briqueincassable.cpp
+	"briqueIncassable.h"
+
+1609331272 c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\briqueincassable.h
+	"brique.h"
+
+1609142961 source:c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\mure.cpp
+	"mure.h"
+	<memory>
+	<iostream>
+	<ostream>
+	<istream>
+	"rectangle.h"
+
+1609143001 c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\mure.h
+	<memory>
+	<istream>
+	<ostream>
+	"point.h"
+	"surface.h"
+	"surfaceNormal.h"
+	"rectangle.h"
+
+1474565254 source:c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\point.cpp
+	<iostream>
+	<cmath>
+	"point.h"
+	"vector.h"
+
+1609331151 source:c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\raquette.cpp
+	"Raquette.h"
+	<memory>
+	<iostream>
+	<ostream>
+	<istream>
+	"point.h"
+	"surface.h"
+	"surfaceNormal.h"
+	"vector.h"
+	"rectangle.h"
+
+1609312846 source:c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\rectangle.cpp
+	"rectangle.h"
+	<iostream>
+	<ostream>
+	<istream>
+
+1608737579 source:c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\surface.cpp
+	"surface.h"
+	<memory>
+
+1608739215 source:c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\surfacedure.cpp
+	"surfaceDure.h"
+	"point.h"
+	"surface.h"
+
+1608718765 c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\surfacedure.h
+	"surface.h"
+	"point.h"
+
+1608739235 source:c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\surfacemolle.cpp
+	"surfaceMolle.h"
+	"point.h"
+	"surface.h"
+
+1608718749 c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\surfacemolle.h
+	"surface.h"
+	"point.h"
+
+1608739109 source:c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\surfacenormal.cpp
+	"surfaceNormal.h"
+	"point.h"
+	"surface.h"
+
+1608739537 source:c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\surfacetueuse.cpp
+	"surfaceTueuse.h"
+	"point.h"
+	"surface.h"
+
+1608739528 c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\surfacetueuse.h
+	"surface.h"
+	"point.h"
+
+1609333607 source:c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\list.cpp
+	"list.h"
+	"rectangle.h"
+
+1609333202 c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\list.h
+	"rectangle.h"
+	<vector>
+
+1609314813 source:c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\testmain.cpp
+	<iostream>
+	"Terrain.h"
+	"Raquette.h"
+	"memory"
+	"rectangle.h"
+	"graphics.h"
+	"afficheurWinBgi.h"
+
+1609334815 c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\terrain.h
+	<vector>
+	<iostream>
+	"rectangle.h"
+	<memory>
+	"mure.h"
+	"Raquette.h"
+	"brique.h"
+	"balle.h"
+	"surface.h"
+	"list.h"
+	"balle.h"
+	"afficheurWinBgi.h"
+
+1474391316 source:c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\vector.cpp
+	<iostream>
+	<cmath>
+	"vector.h"
+	"point.h"
+
+1609317814 source:c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\ajout_list\winbgi.cpp
+	<windows.h>
+	<stddef.h>
+	<stdio.h>
+	<math.h>
+	"graphics.h"
+

@@ -36,7 +36,7 @@ void afficheurWinBgi::afficherRaquette(cassebrique::Raquette* raquette)const
 }
 void afficheurWinBgi::afficherBrique(cassebrique::brique* brique)const
 {
-
+    ::setcolor(200);
     afficherRectangle(brique);
 }
 void afficheurWinBgi::afficherBalle(cassebrique::balle* balle)const
@@ -49,8 +49,13 @@ void afficheurWinBgi::effacerContenu()const
 }
 char afficheurWinBgi::caractereEntree()const
 {
-    int i=::getch();
-    if(i==100){return 'd';}
-    if(i==97){return 'a';}
+    int i =0;
+    //changement au niveau du handle_input(false) au lieu de handle_input(true)
+    // pour que nous attend pas utilisateur qui entre une valeur
+    i=::getch();
+    std::cout<<i<<" ";
+    if(i==100){std::cout<<std::endl;return 'd';}
+    if(i==97){std::cout<<std::endl;return 'a';}
+    return 'g';
 }
 }

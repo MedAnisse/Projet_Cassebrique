@@ -9,6 +9,8 @@
 #include"brique.h"
 #include "balle.h"
 #include "surface.h"
+#include"list.h"
+#include"balle.h"
 #include"afficheurWinBgi.h"
 using std::vector;
 using std::unique_ptr;
@@ -20,18 +22,17 @@ class Terrain
 {
     public:
         unique_ptr<surface> randomSurface();
-        unique_ptr<brique>  randomBrique(point &position,double largeur,double hauteurBrique);
+        brique*  randomBrique(point &position,double largeur,double hauteurBrique);
         Terrain(double hauteurTerrain, double largeurTerrain,int nombreColone,int nombreLigne,double hauteurMure,double hauteurRaquette,double largeurRaquette);
         virtual ~Terrain();
         vector<mure*> mure() const ;
-        vector<brique*> brique() const ;
         Raquette* Raquette() const ;
         balle* balle() const ;
         vector<rectangle*> rectangle() const ;
         void run(double dt,afficheur* d);
         void initializer_Murs(double hauteurMure);
         void initializer_Briques(int nombreColone,int nombreLigne,double hauteurMure);
-        void initializer_Raquette(double hauteurRaquette,double largeurRaquette);
+        void initializer_Raquette(double hauteurRaquette,double largeurRaquette,double hauteurMure);
         void initializer_Balle();
         void initializer_Balle(geom::vector & vect,double vitesse);
         double hauteur() const;
@@ -43,13 +44,13 @@ class Terrain
         void afficheBalle(afficheur* d);
         void RaquetteMoveGauche();
         void RaquetteMoveDroit();
-
-
+        void existColusion(cassebrique::balle& b);
 
     protected:
 
     private:
-        vector<unique_ptr<cassebrique::rectangle>> d_rectangle;
+        vector<unique_ptr<cassebrique::mure>>  d_mures;
+        list  d_briques;
         unique_ptr<cassebrique::balle> d_balle;
         unique_ptr<cassebrique::Raquette> d_raquette;
         double d_largeur;

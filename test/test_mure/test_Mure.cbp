@@ -34,11 +34,15 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="balle.cpp" />
+		<Unit filename="balle.h" />
 		<Unit filename="doctest.h" />
 		<Unit filename="mure.cpp" />
 		<Unit filename="mure.h" />
 		<Unit filename="point.cpp" />
 		<Unit filename="point.h" />
+		<Unit filename="rectangle.cpp" />
+		<Unit filename="rectangle.h" />
 		<Unit filename="surface.cpp" />
 		<Unit filename="surface.h" />
 		<Unit filename="surfaceNormal.cpp" />

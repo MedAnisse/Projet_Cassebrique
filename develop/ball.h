@@ -20,7 +20,7 @@ class ball {
          point position() const;
          vector direction() const;
          void setVitesse(double vitesse);
-         ball* position(double Dt);
+         ball* position(double dt);
 
 
      private :

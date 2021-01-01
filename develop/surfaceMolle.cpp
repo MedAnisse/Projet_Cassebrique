@@ -15,7 +15,7 @@ bool surfaceMolle::collision(balle& b)
     if(surface::distance(b)==0)
         {
             b.diminueVitesse();
-            b.rebond();
+            b.changeDirection();
             return true;
         }
 }

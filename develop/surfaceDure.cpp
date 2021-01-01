@@ -21,7 +21,7 @@ bool surfaceDure::collision(balle& b)
     if(surface::distance(b))
         {
             b.augmenteVitesse();
-            b.rebond();
+            b.changeDirection();
             return true;
         }
 }

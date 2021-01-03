@@ -24,17 +24,12 @@ geom::point surface::b()const
     return d_b;
 }
 
-void surface::moveTo(geom::vector& v)
-{
-    d_a.move(v);
-    d_b.move(v);
-}
 
 bool surface::collision(balle& b)
 {
     if(distance(b)==0)
         {
-            b.rebond();
+            b.changeDirection();
             return true;
         }
 }
@@ -44,26 +39,29 @@ double surface::distance(balle& b )
     double A= (d_b.y()-d_a.y())/(d_b.x()-d_a.x());
     double B= d_a.y()-A*d_a.x();
     geom::point o = b.position();
-    return abs((A*o.x()-o.y()+B)/sqrt(A*A+B*B))-b.rayon();
+    return abs((A*o.x()-o.y()+B)/sqrt(A*A+1))-b.rayon();
 }
 std::unique_ptr<surface> surface:: copie()
 {
     return std::make_unique<surface>(a(),b());
 }
-/*double surface::distanceHorizontal(balle& b)
+
+void surface::moveTo(geom::point& a ,geom::point&b)
 {
-    geom::point o=b.position();//centre de la balle
-    geom::point j{o.x(),d_a.y()};// oj segment perpendiculaire sur la surface ab, x de o égal a x de j si la surface est horizontal
-    return o.distance(j)-b.rayon();
+    d_a=a;
+    d_b=b;
+}
+void surface::move(geom::vector & v)
+{
+    d_a.move(v);
+    d_b.move(v);
+}
+void surface::move(double dx,double dy)
+{
+    d_a.move(dx,dy);
+    d_b.move(dx,dy);
 }
 
-double surface::distanceVertical(balle& b)
-{
-    geom::point o=b.position();//centre de la balle
-    geom::point j{d_a.x(),o.y()};// oj segment perpendiculaire sur la surface ab, y de o égal a y de j si la surface est vertical
-    return o.distance(j)-b.rayon();
-}
-*/
 void surface::print(std::ostream& ost) const
 {
     ost<<""<<"";

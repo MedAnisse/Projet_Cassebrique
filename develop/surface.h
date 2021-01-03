@@ -15,13 +15,14 @@ class surface
         virtual bool collision(balle& b);
         std::unique_ptr<surface> copie();
         double distance(balle& b);
-        //double distanceHorizontal(balle& b);
-        //double distanceVertical(balle& b);
-        void moveTo(geom::vector& v);
+        void moveTo(geom::point& a,geom::point& b);
+        void move(geom::vector & v);
+        void move(double dx,double dy);
         virtual void print(std::ostream& ost) const;
         virtual void read(std::istream& ist);
     private:
-        geom::point d_a,d_b;
+        geom:: point d_a;
+        geom::point d_b;
 };
 
 #endif // SURFACE_H

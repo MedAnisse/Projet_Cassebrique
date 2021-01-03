@@ -1,12 +1,14 @@
 #include "ball.h"
+#include "vector.h"
 
+namespace cassebrique
+{
+ball::ball(point &position,geom::vector& vecteur,double vitesse, double rayon) :
+          d_position{position},d_vectorposition{vecteur},d_vitesse{vitesse},d_rayon{rayon}
+{}
 
-ball::ball(point &position,vector &direction,double vitesse, double rayon) :
-          d_position{position},d_direction{direction},d_vitesse{vitesse},d_rayon{rayon}
-{}
-ball:: ball(double x, double y,double x,double y double rayon):
-         point{x,y},vector{x,y},d_rayon{rayon}
-{}
+balle::~balle(){}
+
 double ball:: rayon() const
  {
      return d_rayon;
@@ -21,10 +23,7 @@ double ball :: vitesse() const
  {
      d_vitesse=vitesse;
  }
- vector ball:: direction() const
- {
-     return d_direction;
- }
+
 ball* ball:: position(double dt)
  {
           
@@ -33,6 +32,7 @@ ball* ball:: position(double dt)
        d_position.moveTo(x, y);
 
  }
+}
 
 
 

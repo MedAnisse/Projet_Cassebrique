@@ -8,14 +8,14 @@ namespace cassebrique
 rectangle::rectangle(const point& BasGauche,const point& HautDroit):d_HautDroit{HautDroit},d_BasGauche{BasGauche}{}
 rectangle::rectangle(point& BasGauche,double hauteur,double largeur):d_BasGauche{BasGauche}
 {
-    d_HautDroit=point(d_BasGauche.x()+largeur , d_BasGauche.y()-hauteur);
+    d_HautDroit=point(d_BasGauche.x()+largeur , d_BasGauche.y()+hauteur);
 }
  rectangle::~rectangle(){}
 rectangle::rectangle():d_BasGauche{0.0,0.0},d_HautDroit{0.0,0.0}{}
 
 double rectangle::Hauteur()const
 {
-    return -d_HautDroit.y()+d_BasGauche.y();
+    return d_HautDroit.y()-d_BasGauche.y();
 }
 double rectangle::Largeur()const
 {

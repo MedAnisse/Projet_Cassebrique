@@ -15,7 +15,7 @@ rectangle::rectangle():d_BasGauche{0.0,0.0},d_HautDroit{0.0,0.0}{}
 
 double rectangle::Hauteur()const
 {
-    return -d_HautDroit.y()+d_BasGauche.y();
+    return d_HautDroit.y()-d_BasGauche.y();
 }
 double rectangle::Largeur()const
 {

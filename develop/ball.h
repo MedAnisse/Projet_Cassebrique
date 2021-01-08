@@ -2,31 +2,31 @@
 #define BALL_H
 #include "point.h"
 #include "vector.h"
-#include<iosfwd>
+using geom::point;
+using geom::vector;
 
 
-namespace geom
+namespace cassebrique
 {
-class point;
 
 class ball {
 
      public :
 
-         ball(point &position,vector &direction,double vitesse, double rayon);
-         ball(double x,double y,double xd,double yd, double rayon);
+         ball(point &position, geom::vector& vecteur,double vitesse, double rayon);
+         virtual ~balle();
          double rayon() const;
          double vitesse() const;
          point position() const;
-         vector direction() const;
          void setVitesse(double vitesse);
          ball* position(double dt);
 
 
      private :
-        double d_vitesse,d_rayon;
-        point d_position;
-        vector d_direction;
+         point d_position;
+         double d_vitesse;
+         double d_rayon;
+         geom::vector d_vectorposition;
 };
 
 }

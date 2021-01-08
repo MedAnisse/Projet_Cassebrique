@@ -37,7 +37,7 @@ void afficheurWinBgi::afficherRaquette(cassebrique::Raquette* raquette)const
     x=raquette->debut().x();
     y=raquette->debut().y();
     x1=raquette->fin().x();
-    y1=raquette->fin().x();
+    y1=raquette->fin().y();
    ::line(x,y,x1,y1);
 }
 void afficheurWinBgi::afficherBrique(cassebrique::brique* brique)const

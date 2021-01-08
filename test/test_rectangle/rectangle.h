@@ -17,18 +17,15 @@ public:
     virtual ~rectangle();
     double Hauteur()const;
     double Largeur()const;
-    void print(std::ostream& ost) const;
-    void read(std::istream& ist);
+
     point BasGauche() const;
     point HautDroit() const;
-private:
+
+protected:
     point d_BasGauche;
     point d_HautDroit;
-protected:
-
 };
-std::ostream& operator<<(std::ostream& , const rectangle& );
-std::istream& operator>>(std::istream& , rectangle& );
+
 
 }
 #endif // RECTANGLE_H

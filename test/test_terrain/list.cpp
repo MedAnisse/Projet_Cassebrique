@@ -30,8 +30,6 @@ void list::erase(int index)
      {
          element* tmp=tete;
          tete=tete->next;
-         point a=tmp->info->BasGauche();
-         point b=tmp->info->HautDroit();
          delete tmp;
      }
      else
@@ -49,8 +47,6 @@ void list::erase(int index)
             i++;
     }
 
-        point a=tmp->info->BasGauche();
-         point b=tmp->info->HautDroit();
          t=tmp->next;
         delete tmp;
 }

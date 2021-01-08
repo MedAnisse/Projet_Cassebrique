@@ -10,7 +10,7 @@
 #include "surface.h"
 #include "surfaceTueuse.h"
 #include "brique.h"
-#include"mure.h"
+#include"mur.h"
 #include "Raquette.h"
 #include"list.h"
 #include "balle.h"
@@ -26,7 +26,7 @@ using cassebrique::rectangle;
 using cassebrique::Terrain;
 using cassebrique::surface;
 using cassebrique:: surfaceTueuse;
-using cassebrique::mure;
+using cassebrique::mur;
 using cassebrique::brique;
 using cassebrique::Raquette;
 
@@ -35,24 +35,23 @@ using std::vector;
     double largeurTerrain=900;
     int nombreColone=5;
     int nombreLigne=5;
-    double hauteurMure=10;
+    double hauteurmur=10;
     double hauteurRaquette=20;
     double largeurRaquette=30;
-    Terrain TerrainTest{hauteurTerrain,largeurTerrain,nombreColone,nombreLigne,hauteurMure,hauteurRaquette,largeurRaquette};
+    Terrain TerrainTest{hauteurTerrain,largeurTerrain,nombreColone,nombreLigne,hauteurmur,hauteurRaquette,largeurRaquette};
 TEST_CASE("La creation d'objet Terrain s'exécute correctement")
 {
-
-        SUBCASE("La creation de vecteur Murs s'exécute correctement")
+        SUBCASE("La creation de vecteur Murs s execute correctement")
         {
-            vector<mure*> tmpMures=TerrainTest.mures();
+            vector<mur*> tmpmurs=TerrainTest.murs();
             SUBCASE("La taille vecteur Murs est correcte")
                 {
-                    REQUIRE_EQ(tmpMures.size(),4 );
+                    REQUIRE_EQ(tmpmurs.size(),4 );
                 }
             SUBCASE("Le type de la surface de dernier elelment de vecteur Murs est correcte")
                 {
-                    surface* tmpMureSurface= tmpMures.back()->surfaceType();
-                    surfaceTueuse* tmpSurface= dynamic_cast<surfaceTueuse*> (tmpMureSurface);
+                    surface* tmpmurSurface= tmpmurs.back()->surfaceType();
+                    surfaceTueuse* tmpSurface= dynamic_cast<surfaceTueuse*> (tmpmurSurface);
                     REQUIRE_EQ((tmpSurface==NULL),false );
                 }
         }
@@ -126,5 +125,14 @@ TEST_CASE("Le déplacement Raquette s'exécute correctement")
         {
             testRaquetteMove(TerrainTest,"Droit");
         }
+}
+TEST_CASE("Existe collision s'exécute correctement")
+{
+    point position{779.373,684.373};
+    double ongle=0.25;
+    double vitesse=2.5;
+    double rayon =9;
+    cassebrique::balle* tmpBalle = new cassebrique::balle (position,ongle,vitesse,rayon);
+    FAST_REQUIRE_EQ(TerrainTest.existColusion(tmpBalle),true);
 }
 

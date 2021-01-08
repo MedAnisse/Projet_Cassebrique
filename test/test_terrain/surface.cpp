@@ -39,13 +39,24 @@ bool surface::collusion(cassebrique::balle* balle)
 }
 double surface::distance(balle* b )
 {
-    double A= (d_fin.y()-d_debut.y())/(d_fin.x()-d_debut.x());
-    double B= d_debut.y()-A*d_debut.x();
-    geom::point o = b->position();
-    double distance=abs((A*o.x()-o.y()+B)/sqrt((A*A)+(B*B))) ;//- b->rayon();
-
-    return distance;
-
+    if (d_debut.x()==d_fin.x())
+    {
+        geom::point o=b->position();//centre de la balle
+        if(o.y()>=d_debut.y()&&o.y()<=d_fin.y()||o.y()<=d_debut.y()&&o.y()>=d_fin.y())
+        {geom::point j{d_debut.x(),o.y()};// oj segment perpendiculaire sur la surface ab, x de o égal a x de j si la surface est horizontal
+        return o.distance(j)-b->rayon();
+        }
+    }else
+    {
+        if(d_debut.y()==d_fin.y())
+            {
+                geom::point o=b->position();//centre de la balle
+                if(o.x()>=d_debut.x()&&o.x()<=d_fin.x()||o.y()<=d_debut.y()&&o.y()>=d_fin.y())
+                {geom::point j{o.x(),d_debut.y()};// oj segment perpendiculaire sur la surface ab, y de o égal a y de j si la surface est vertical
+                return o.distance(j)-b->rayon();}
+            }
+    }
+return 1.0;
 }
 point surface::debut()const
 {

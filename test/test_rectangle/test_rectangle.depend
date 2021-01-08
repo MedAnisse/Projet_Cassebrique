@@ -11,13 +11,13 @@
 1474391214 c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\test_rectangle\vector.h
 	<iosfwd>
 
-1608563157 source:c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\test_rectangle\rectangle.cpp
+1609694521 source:c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\test_rectangle\rectangle.cpp
 	"rectangle.h"
 	<iostream>
 	<ostream>
 	<istream>
 
-1608563056 c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\test_rectangle\rectangle.h
+1610095342 c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\test_rectangle\rectangle.h
 	<memory>
 	<istream>
 	<ostream>
@@ -69,4 +69,15 @@
 	<io.h>
 	<sys/time.h>
 	<unistd.h>
+
+1608563257 source:c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\test_rectangle\testrectangle.cpp
+	"doctest.h"
+	"point.h"
+	"rectangle.h"
+
+1474391316 source:c:\users\joke\desktop\etudiant\uha\qualiter de programation\test_cassebrique\test_rectangle\vector.cpp
+	<iostream>
+	<cmath>
+	"vector.h"
+	"point.h"
 

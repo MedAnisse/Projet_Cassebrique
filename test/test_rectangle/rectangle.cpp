@@ -21,25 +21,6 @@ double rectangle::Largeur()const
 {
    return d_HautDroit.x()-d_BasGauche.x();
 }
-void rectangle::print(std::ostream& ost) const
-{
-    ost<<""<<"";
-}
-void rectangle::read(std::istream& ist)
-{
-
-}
-std::ostream& operator<<(std::ostream& ost, const rectangle& r)
-{
-  r.print(ost);
-  return ost;
-}
-
-std::istream& operator>>(std::istream& ist, rectangle& r)
-{
-  r.read(ist);
-  return ist;
-}
 point rectangle::BasGauche() const
 {
     return d_BasGauche;

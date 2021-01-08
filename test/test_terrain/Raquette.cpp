@@ -65,7 +65,7 @@ namespace cassebrique
             move_Droit();
         }
     }
-    bool Raquette::OnCollusion(balle* balle)const
+    bool Raquette::OnCollision(balle* balle)const
 {
     return d_surface->collusion(balle);
 }

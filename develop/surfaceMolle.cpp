@@ -2,20 +2,16 @@
 #include <iostream>
 
 surfaceMolle::surfaceMolle(const geom::point& a,const geom::point& b): surface{a,b}
-{
-    //ctor
-}
+{}
 
 surfaceMolle::~surfaceMolle()
-{
-    //dtor
-}
+{}
 bool surfaceMolle::collision(balle& b)
 {
     if(surface::distance(b)==0)
         {
             b.diminueVitesse();
-            b.changeDirection();
+            b.changerDirection();
             return true;
         }
 }

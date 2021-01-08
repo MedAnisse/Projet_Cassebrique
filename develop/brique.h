@@ -1,21 +1,24 @@
 #ifndef BRIQUE_H
 #define BRIQUE_H
+#include "rectangle.h"
+#include "surface.h"
+#include <memory>
+#include <vector>
+using std::vector;
+using std::unique_ptr;
 namespace cassebrique
 {
-class brique
+class brique: public rectangle
 {
 public:
-    brique(point& BasGauche,point& HautDroit);
-    brique(point& BasGauche,double hauteur,double largeur);
-    brique(double BasGauche_x,double BasGauche_y,double HautDroit_x,double HautDroit_y);
-    brique(double BasGauche_x,double BasGauche_y,double BasGauche_x,double BasGauche_y);
+    brique();
+    brique(point& BasGauche,point& HautDroit,unique_ptr<surface>surfaceK);
+    brique(point& BasGauche,double hauteur,double largeur,unique_ptr<surface>surfaceK);
     virtual ~brique();
-    virtual bool existe_collusion(balle& balle) = 0;
-private:
-    point d_BasGauche;
-    point d_HautDroit;
-    vector<unique_ptr<surface>> d_vector_surface;
+    void  initializerLesSurfaces(unique_ptr<surface>surfacek);
+    virtual bool OnCollision(balle* balle) ;
 protected:
+       vector<unique_ptr<surface>> d_surface;
 
 };
 }

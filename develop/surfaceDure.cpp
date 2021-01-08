@@ -3,12 +3,10 @@
 
 surfaceDure::surfaceDure(const geom::point& a,const geom::point& b):surface{a,b}
 {
-    //ctor
 }
 
 surfaceDure::~surfaceDure()
 {
-    //dtor
 }
 
 std::unique_ptr<surfaceDure> surfaceDure:: copie()
@@ -21,7 +19,7 @@ bool surfaceDure::collision(balle& b)
     if(surface::distance(b))
         {
             b.augmenteVitesse();
-            b.changeDirection();
+            b.changerDirection();
             return true;
         }
 }

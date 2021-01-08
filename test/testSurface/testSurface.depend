@@ -1,0 +1,68 @@
+# depslib dependency file v1.0
+1514140574 source:c:\users\asmae\desktop\projet_cassebrique-main\testsurface\main.cpp
+	<iostream>
+
+1610012125 source:c:\users\asmae\desktop\projet_cassebrique-main\testsurface\point.cpp
+	<iostream>
+	<cmath>
+	"point.h"
+	"vector.h"
+
+1610012274 c:\users\asmae\desktop\projet_cassebrique-main\testsurface\point.h
+	<iosfwd>
+
+1610012339 c:\users\asmae\desktop\projet_cassebrique-main\testsurface\vector.h
+	<iosfwd>
+
+1610012017 source:c:\users\asmae\desktop\projet_cassebrique-main\testsurface\vector.cpp
+	<iostream>
+	<cmath>
+	"vector.h"
+	"point.h"
+
+1610013199 source:c:\users\asmae\desktop\projet_cassebrique-main\testsurface\balle.cpp
+	"balle.h"
+
+1610012544 c:\users\asmae\desktop\projet_cassebrique-main\testsurface\balle.h
+	"point.h"
+	"vector.h"
+
+1610012756 source:c:\users\asmae\desktop\projet_cassebrique-main\testsurface\surfacetueuse.cpp
+	"surfaceTueuse.h"
+	<iostream>
+
+1610012842 c:\users\asmae\desktop\projet_cassebrique-main\testsurface\surfacetueuse.h
+	<vector>
+	"balle.h"
+	"surface.h"
+
+1610092536 c:\users\asmae\desktop\projet_cassebrique-main\testsurface\surface.h
+	"balle.h"
+	"vector.h"
+	<memory>
+
+1610092449 source:c:\users\asmae\desktop\projet_cassebrique-main\testsurface\surface.cpp
+	"surface.h"
+	"math.h"
+	<stdlib.h>
+	<iostream>
+
+1610098446 source:c:\users\asmae\desktop\projet_cassebrique-main\testsurface\surfacemolle.cpp
+	"surfaceMolle.h"
+	<iostream>
+
+1610012854 c:\users\asmae\desktop\projet_cassebrique-main\testsurface\surfacemolle.h
+	<vector>
+	<memory>
+	"balle.h"
+	"surface.h"
+
+1610042261 source:c:\users\asmae\desktop\projet_cassebrique-main\testsurface\surfacedure.cpp
+	"surfaceDure.h"
+	<iostream>
+
+1610012865 c:\users\asmae\desktop\projet_cassebrique-main\testsurface\surfacedure.h
+	<vector>
+	"balle.h"
+	"surface.h"
+
